@@ -1,5 +1,5 @@
 // Import the usersList module
-const usersList = require("../../database/commands/index");
+const usersList = require("../database/commands/index");
 
 module.exports = {
   config: {

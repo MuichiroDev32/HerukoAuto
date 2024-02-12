@@ -1,3 +1,5 @@
 appstate.json
 admin.json
 database/data/yueDB.db
+.upm/
+node_modules/

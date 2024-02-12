@@ -3,6 +3,7 @@ const fs = require("fs-extra");
 const path = require("path");
 const login = require("fb-chat-api-temp");
 const gradient = require("gradient-string");
+const axios = require("axios");
 
 const {
   addUserToDB,
@@ -29,6 +30,7 @@ function loadCommands() {
     );
     console.log(loadingLog);
   });
+  console.log("");
 }
 
 function loadVersion() {

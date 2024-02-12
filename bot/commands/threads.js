@@ -1,4 +1,4 @@
-const { listThreads } = require("../../database/commands/index");
+const { listThreads } = require("../database/commands/index");
 
 module.exports = {
   config: {

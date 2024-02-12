@@ -1,6 +1,6 @@
 {
   "name": "Yue",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "yue.js",
   "scripts": {
     "start": "node yue.js",
@@ -17,6 +17,7 @@
     "express": "^4.18.2",
     "express-handlebars": "^7.1.2",
     "fb-chat-api-temp": "github:ntkhang03/fb-chat-api-temp",
+    "fs-extra": "^11.2.0",
     "gradient-string": "2.0.2",
     "hercai": "^12.1.1",
     "node-fetch": "^3.3.2",

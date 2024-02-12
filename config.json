@@ -1,0 +1,11 @@
+{
+  "apiOptions": {
+    "listenEvents": true,
+    "logLevel": "silent"
+  },
+  "botPrefix": ":",
+  "botAdmins": [
+    "ADMIN1_UID", 
+    "ADMIN2_UID"
+  ],
+}

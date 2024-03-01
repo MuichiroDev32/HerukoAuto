@@ -23,9 +23,9 @@ module.exports = {
 
     switch (true) {
       case args.length === 0:
-        let helpMessage = `📍 | 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 (Page 1/${Math.ceil(
+        let helpMessage = `【 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 】\n━━━━━━━━━━━━━━━\n【 Page 1/${Math.ceil(
           commandFiles.length / commandsPerPage,
-        )}):\n`;
+        )} 】:\n`;
 
         commandFiles.slice(0, commandsPerPage).forEach((file) => {
           const commandName = path.basename(file, ".js");
@@ -54,9 +54,9 @@ module.exports = {
           return;
         }
 
-        let pageMessage = `📍 | 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 (Page ${pageNumber}/${Math.ceil(
+        let pageMessage = `【 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 】\n━━━━━━━━━━━━━━━\n【 Page ${pageNumber}/${Math.ceil(
           commandFiles.length / commandsPerPage,
-        )}):\n`;
+        )} 】:\n`;
 
         commandFiles.slice(startIndex, endIndex).forEach((file) => {
           const commandName = path.basename(file, ".js");
@@ -95,3 +95,4 @@ ${usage || "Guess it"}`,
     }
   },
 };
+                                                         

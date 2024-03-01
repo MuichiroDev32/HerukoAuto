@@ -1,9 +1,11 @@
-# Yue
+# Heruko
+
+# Yue file
 
 [![Made with Love](https://img.shields.io/badge/Made%20with-%E2%99%A5%EF%B8%8F-red)](https://github.com/ruihq/Yue)
 [![GitHub license](https://img.shields.io/badge/License-Rui%20Custom-blue)](LICENSE.md)
 
-Yue is a chatbot engine for Messenger, powered by Node.js and integrated with various APIs for enhanced functionality.
+heruko is a chatbot modified by Jaymar owner file yue is engine for Messenger, powered by Node.js and integrated with various APIs for enhanced functionality.
 
 ## Features
 
@@ -17,13 +19,13 @@ To embark on your Yue journey, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/ruihq/Yue.git
+   git clone https://github.com/MuichiroDev32/HerukoAuto.git
    ```
 
 2. **Navigate to the Yue directory:**
 
    ```bash
-   cd Yue
+   cd HerukoAuto
    ```
 
 3. **Run the bot:**

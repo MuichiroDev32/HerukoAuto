@@ -1,50 +1,48 @@
 const axios = require("axios");
 
 module.exports = {
-  config: {
-    name: "ai",
-    description: "Generate AI-based responses using GPT.",
-    usage: ":ai <query>",
-    author: "Rui",
-  },
-  run: async ({ api, event, args }) => {
-    const input = args.join(" ");
+    config: {
+        name: "ai",
+        description: "Interact with an AI to get responses to your questions.",
+        usage: ":ai <question>",
+        author: "Rui",
+        license: "ISC",
+        permission: 0
+    },
 
-    if (!input) {
-      api.sendMessage(
-        "No query detected. Correct usage is `:ai <query>`.",
-        event.threadID,
-        event.messageID,
-      );
-      return;
+    run: async ({ api, event, args, box }) => {
+        const question = args.join(" ").trim();
+
+        if (question) {
+            try {
+                const senderID = event.senderID;
+                const userInfo = await getUserInfo(api, senderID);
+                const userName = userInfo.name || 'User';
+
+                const formattedQuestion = `${userName} asked: ${question}`;
+
+                box.reply(`🧠 |  Hello, ${userName}! Waiting for Ai Response, processing your question Please wait....`);
+                const response = await axios.get(`https://hiro-api.replit.app/ai/hercai?ask=${encodeURIComponent(formattedQuestion)}`);
+                const aiResponse = response.data.reply;
+                box.reply(`🧠 | AI |\n━━━━━━━━━━━━━━━\n ${aiResponse}` + "\n━━━━━━━━━━━━━━━\n╰•★★ AI RESPONSE ★★•╯");
+            } catch (error) {
+                console.error("Error fetching AI response:", error);
+                box.reply("Failed to get AI response. Please try again later.");
+            }
+        } else {
+            box.reply("Please provide a question after the command. For example: `:ai what is love?`");
+        }
     }
-
-    try {
-      const response = await axios.post(
-        "https://api.openai.com/v1/engines/davinci-codex/completions",
-        {
-          prompt: input,
-          max_tokens: 100,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "Bearer YOUR_API_KEY",
-          },
-        },
-      );
-
-      const aiResponse =
-        response.data.choices[0]?.text.trim() || "No response from AI.";
-
-      api.sendMessage(aiResponse, event.threadID, event.messageID);
-    } catch (error) {
-      console.error("Error generating AI response:", error.message);
-      api.sendMessage(
-        "An error occurred while generating AI response.",
-        event.threadID,
-        event.messageID,
-      );
-    }
-  },
 };
+
+async function getUserInfo(api, senderID) {
+    return new Promise((resolve, reject) => {
+        api.getUserInfo(senderID, (err, userInfo) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(userInfo[senderID]);
+            }
+        });
+    });
+}

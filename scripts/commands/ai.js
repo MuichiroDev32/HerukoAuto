@@ -21,10 +21,10 @@ module.exports = {
 
                 const formattedQuestion = `${userName} asked: ${question}`;
 
-                box.reply(`🧠 |  Hello, ${userName}! Waiting for Ai Response, processing your question Please wait....`);
-                const response = await axios.get(`https://hiro-api.replit.app/ai/hercai?ask=${encodeURIComponent(formattedQuestion)}`);
+                box.reply(`👋 |  Hello, ${userName}! Waiting for Ai Response, Ai processing your "${question}" Please wait....`);
+                const response = await axios.get(`http://fi3.bot-hosting.net:20265/api/gpt?question=${encodeURIComponent(formattedQuestion)}`);
                 const aiResponse = response.data.reply;
-                box.reply(`🧠 | AI |\n━━━━━━━━━━━━━━━\n ${aiResponse}` + "\n━━━━━━━━━━━━━━━\n╰•★★ AI RESPONSE ★★•╯");
+                box.reply(`🧠 | AI |\n━━━━━━━━━━━━━━━\n ${aiResponse}` + "\n━━━━━━━━━━━━━━━\n𝙾𝚠𝚗𝚎𝚛: 𝙹𝚊𝚢 𝙼𝚊𝚛 𝚡 𝙷𝚎𝚛𝚞𝚔𝚘");
             } catch (error) {
                 console.error("Error fetching AI response:", error);
                 box.reply("Failed to get AI response. Please try again later.");

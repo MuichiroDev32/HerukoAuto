@@ -3,10 +3,10 @@
 # Yue file
 
 [![Made with Love](https://img.shields.io/badge/Made%20with-%E2%99%A5%EF%B8%8F-red)](https://github.com/ruihq/Yue)
-[![Modified by Jaymar](https://img.shields.io/badge/Made%20with-%E2%99%A5%EF%B8%8F-red)](https://github.com/MuichiroDev32/HerukoAuto)
+[![Made with heart](https://img.shields.io/badge/Made%20with-%E2%99%A5%EF%B8%8F-red)](https://github.com/MuichiroDev32/HerukoAuto)
 [![GitHub license](https://img.shields.io/badge/License-Rui%20Custom-blue)](LICENSE.md)
 
-heruko is a chatbot modified by Jaymar owner file yue is engine for Messenger, powered by Node.js and integrated with various APIs for enhanced functionality.
+Heruko Ai is a chatbot modified by Jaymar owner file yue, is engine for Messenger, powered by Node.js and integrated with various APIs for enhanced functionality.
 
 ## Features
 

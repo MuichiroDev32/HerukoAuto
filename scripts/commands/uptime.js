@@ -29,18 +29,18 @@ module.exports = {
       const usedMemoryGB = totalMemoryGB - freeMemoryGB;
 
       const systemInfo = `
-━━━━[ 𝗨𝗣𝗧𝗜𝗠𝗘 ]━━━━
+━━━━[ 𝙷𝙴𝚁𝚄𝙺𝙾 𝚄𝙿𝚃𝙸𝙼𝙴 ]━━━━
 
- ${uptimeFormatted}
+➤ [ ${uptimeFormatted} ]
 
- Language: Node.js
- OS: ${os.type()} ${os.arch()}
- Node.js Version: ${process.version}
- CPU Model: ${os.cpus()[0].model}
- Memory: ${usedMemoryGB.toFixed(2)} GB / ${totalMemoryGB.toFixed(2)} GB
- CPU Usage: ${cpuUsage.toFixed(1)}%
- RAM Usage: ${((usedMemoryGB / totalMemoryGB) * 100).toFixed(1)}%
- Uptime: ${uptimeInSeconds.toFixed(2)} seconds
+ Language:➤ Node.js
+ OS:➤ ${os.type()} ${os.arch()}
+ Node.js Version:➤ ${process.version}
+ CPU Model:➤ ${os.cpus()[0].model}
+ Memory:➤ ${usedMemoryGB.toFixed(2)} GB / ${totalMemoryGB.toFixed(2)} GB
+ CPU Usage:➤ ${cpuUsage.toFixed(1)}%
+ RAM Usage:➤ ${((usedMemoryGB / totalMemoryGB) * 100).toFixed(1)}%
+ Uptime:➤ ${uptimeInSeconds.toFixed(2)} seconds
 `;
 
       api.sendMessage(systemInfo, event.threadID, event.messageID);

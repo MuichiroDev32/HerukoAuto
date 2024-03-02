@@ -21,7 +21,7 @@ module.exports = {
 
                 const formattedQuestion = `${userName} asked: ${question}`;
 
-                box.reply(`👋 |  Hello, ${userName}! Zhen is searching your ${question} please wait....`);
+                box.reply(`👋 |  Hello, ${userName}! Zhen is searching your "${question}" please wait....`);
                 const response = await axios.get(`http://fi3.bot-hosting.net:20265/api/gpt?question=${encodeURIComponent(formattedQuestion)}`);
                 const aiResponse = response.data.reply;
                 box.reply(`🧠 | 𝐙𝐡𝐞𝐧 𝐀𝐢 |\n━━━━━━━━━━━━━━━\n ${aiResponse}` + "\n━━━━━━━━━━━━━━━\n𝙾𝚠𝚗𝚎𝚛: 𝙹𝚊𝚢 𝙼𝚊𝚛 𝚡 𝙷𝚎𝚛𝚞𝚔𝚘");

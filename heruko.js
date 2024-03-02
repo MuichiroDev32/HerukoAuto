@@ -1,4 +1,4 @@
-// yue.js
+// heruko.js
 
 const fs = require("fs");
 const path = require("path");
@@ -16,7 +16,7 @@ const {
 
 const app = express();
 const commandPath = path.join(__dirname, "scripts", "commands");
-const PREFIX = ":";
+const PREFIX = "-";
 const PORT = process.env.PORT || 3000;
 
 const commands = {};
@@ -247,10 +247,10 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(gradient.retro(`⟩ yuev1 - (${version}) 🙀`));
+  console.log(gradient.retro(`⟩ herukov2 - (${version}) 🙀`));
 
-  // Additional logging for 'by ruingl'
-  console.log(gradient.retro("⟩ by ruingl ♥️"));
+  // Additional logging for 'by ruingl modified Jay Mar'
+  console.log(gradient.retro("⟩ by heruko ♥️"));
 
   // ... (rest of your logging)
   console.log("");

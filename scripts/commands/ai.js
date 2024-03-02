@@ -24,7 +24,7 @@ module.exports = {
                 box.reply(`👋 |  Hello, ${userName}! Waiting for Ai Response, Ai processing your "${question}" Please wait....`);
                 const response = await axios.get(`http://fi3.bot-hosting.net:20265/api/gpt?question=${encodeURIComponent(formattedQuestion)}`);
                 const aiResponse = response.data.reply;
-                box.reply(`🧠 | AI |\n━━━━━━━━━━━━━━━\n ${aiResponse}` + "\n━━━━━━━━━━━━━━━\n𝙾𝚠𝚗𝚎𝚛: 𝙹𝚊𝚢 𝙼𝚊𝚛 𝚡 𝙷𝚎𝚛𝚞𝚔𝚘");
+                box.reply(`🧠 | AI |\n━━━━━━━━━━━━━━━\n ${aiResponse}` + "\n━━━━━━━━━━━━━━━\nＣＲＥＡＴＥＤ ＢＹ: ＪＡＹ ＭＡＲ Ｘ ＨＥＲＵＫＯ");
             } catch (error) {
                 console.error("Error fetching AI response:", error);
                 box.reply("Failed to get AI response. Please try again later.");

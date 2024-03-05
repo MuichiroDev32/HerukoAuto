@@ -22,7 +22,7 @@ module.exports = {
                 const formattedQuestion = `${userName} asked: ${question}`;
 
                 box.reply(`👋 |  Hello, ${userName}! Zhen is searching your "${question}" please wait....↺`);
-                const response = await axios.get(`http://fi3.bot-hosting.net:20265/api/gpt?question=${encodeURIComponent(formattedQuestion)}`);
+                const response = await axios.get(`https://bluerepoapislasttry.onrender.com/hercai?content=${encodeURIComponent(formattedQuestion)}`);
                 const aiResponse = response.data.reply;
                 box.reply(`┏━━━━━━━━━━━━━━━━┓\n➤ 𝗭𝗛𝗘𝗡 𝗥𝗘𝗦𝗣𝗢𝗡𝗦𝗘 💬\n┗━━━━━━━━━━━━━━━━┛\n ${aiResponse}` + "\n━━━━━━━━━━━━━━━\n➤ 𝙲𝚛𝚎𝚊𝚝𝚎𝚍 𝙱𝚢: 𝙹𝚊𝚢𝚖𝚊𝚛 𝚡 𝙷𝚎𝚛𝚞𝚔𝚘");
             } catch (error) {

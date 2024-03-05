@@ -22,7 +22,7 @@ module.exports = {
                 const formattedQuestion = `${userName} asked: ${question}`;
 
                 box.reply(`👋 |  Hello, ${userName}! Ai Searching your "${question}" Please wait....↺`);
-                const response = await axios.get(`https://jonellccapisproject-e1a0d0d91186.herokuapp.com/api/gpt2?prompt=${encodeURIComponent(formattedQuestion)}`);
+                const response = await axios.get(`https://bluemiko.onrender.com/hercai?content=${encodeURIComponent(formattedQuestion)}`);
                 const aiResponse = response.data.reply;
                 box.reply(`┏━━━━━━━━━━━━━┓\n➤ 𝗔𝗜 𝗥𝗘𝗦𝗣𝗢𝗡𝗦𝗘 💬\n┗━━━━━━━━━━━━━┛\n\n ${aiResponse}` + "\n━━━━━━━━━━━━━━━\n➤ 𝙲𝚛𝚎𝚊𝚝𝚎𝚍 𝙱𝚢: 𝙹𝚊𝚢𝚖𝚊𝚛 𝚡 𝙷𝚎𝚛𝚞𝚔𝚘");
             } catch (error) {

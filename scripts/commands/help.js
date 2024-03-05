@@ -23,7 +23,7 @@ module.exports = {
 
     switch (true) {
       case args.length === 0:
-        let helpMessage = `\n┏━━━━━━━━━━━━┓\n\n➤ 𝗛𝗲𝗿𝘂 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 💌\n\n┗━━━━━━━━━━━━━┛\n【 Page 1/${Math.ceil(
+        let helpMessage = `\n┏━━━━━━━━━━━━┓\n➤ 𝗛𝗲𝗿𝘂 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 ⚒️\n┗━━━━━━━━━━━━━┛\n【 Page 1/${Math.ceil(
           commandFiles.length / commandsPerPage,
         )} 】:\n`;
 

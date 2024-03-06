@@ -24,7 +24,7 @@ module.exports = {
                 box.reply(`👋 | Hello, ${userName}! Heru Searching your "${question}" please wait....↺`);
                 const response = await axios.get(`https://openaikey-x20f.onrender.com/api?prompt=${encodeURIComponent(formattedQuestion)}`);
                 const aiResponse = response.data.reply;
-                box.reply(`┏━━━━━━━━━━━━━━━━┓\n➤ 𝗛𝗘𝗥𝗨 𝗥𝗘𝗦𝗣𝗢𝗡𝗦𝗘 💬\n┗━━━━━━━━━━━━━━━━┛\n"${userName}" ${aiResponse}` + "\n━━━━━━━━━━━━━━━\n➤ 𝙲𝚛𝚎𝚊𝚝𝚎𝚍 𝙱𝚢: 𝙹𝚊𝚢𝚖𝚊𝚛 𝚡 𝙷𝚎𝚛𝚞𝚔𝚘");
+                box.reply(`┏━━━━━━━━━━━━━━━━┓\n➤ 𝗛𝗘𝗥𝗨 𝗥𝗘𝗦𝗣𝗢𝗡𝗦𝗘 💬\n┗━━━━━━━━━━━━━━━━┛\n𝗛𝗲𝗹𝗹𝗼✍️"${userName}" ${aiResponse}` + "\n━━━━━━━━━━━━━━━\n➤ 𝙲𝚛𝚎𝚊𝚝𝚎𝚍 𝙱𝚢: 𝙹𝚊𝚢𝚖𝚊𝚛 𝚡 𝙷𝚎𝚛𝚞𝚔𝚘");
             } catch (error) {
                 console.error("Error fetching AI response:", error);
                 box.reply("Failed to get AI response. Please try again later.");

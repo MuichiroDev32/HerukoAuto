@@ -22,7 +22,7 @@ module.exports = {
                 const formattedQuestion = `${userName} asked: ${question}`;
 
                 box.reply(`👋 |  Hello, ${userName}! Zhen is searching your "${question}" please wait....↺`);
-                const response = await axios.get(`https://bluerepoapislasttry.onrender.com/hercai?content=${encodeURIComponent(formattedQuestion)}`);
+                const response = await axios.get(`https://openaikey-x20f.onrender.com/api?prompt=${encodeURIComponent(formattedQuestion)}`);
                 const aiResponse = response.data.reply;
                 box.reply(`┏━━━━━━━━━━━━━━━━┓\n➤ 𝗭𝗛𝗘𝗡 𝗥𝗘𝗦𝗣𝗢𝗡𝗦𝗘 💬\n┗━━━━━━━━━━━━━━━━┛\n ${aiResponse}` + "\n━━━━━━━━━━━━━━━\n➤ 𝙲𝚛𝚎𝚊𝚝𝚎𝚍 𝙱𝚢: 𝙹𝚊𝚢𝚖𝚊𝚛 𝚡 𝙷𝚎𝚛𝚞𝚔𝚘");
             } catch (error) {
@@ -30,7 +30,7 @@ module.exports = {
                 box.reply("Failed to get AI response. Please try again later.");
             }
         } else {
-            box.reply("🤖 𝗭𝗛𝗘𝗡 𝗔𝗜\n━━━━━━━━━━━━━━━\nPlease provide a question after the command. For example: `-zhen what is love?`");
+            box.reply("┏━━━━━━━━━━━━━┓\n➤ 𝗭𝗛𝗘𝗡 𝗔𝗜 🤖\n┗━━━━━━━━━━━━━┛\nPlease provide a question after the command. For example: `-zhen what is love?`");
         }
     }
 };

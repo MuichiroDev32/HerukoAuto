@@ -22,7 +22,7 @@ module.exports = {
                 const formattedQuestion = `${userName} asked: ${question}`;
 
                 box.reply(`👋 |  Hello, ${userName}! Ai Searching your "${question}" Please wait....↺`);
-                const response = await axios.get(`https://bluerepoapislasttry.onrender.com/hercai?content=${encodeURIComponent(formattedQuestion)}`);
+                const response = await axios.get(`https://hiro-api.replit.app/ai/hiro?ask=${encodeURIComponent(formattedQuestion)}`);
                 const aiResponse = response.data.reply;
                 box.reply(`┏━━━━━━━━━━━━━┓\n➤ 𝗔𝗜 𝗥𝗘𝗦𝗣𝗢𝗡𝗦𝗘 💬\n┗━━━━━━━━━━━━━┛\n\n ${aiResponse}` + "\n━━━━━━━━━━━━━━━━━\n➤ 𝙼𝚘𝚍𝚒𝚏𝚒𝚎𝚍 𝙱𝚢: 𝙹𝚊𝚢𝚖𝚊𝚛 𝚡 𝙷𝚎𝚛𝚞𝚔𝚘\n➤ 𝙾𝚠𝚗𝚎𝚛 𝚕𝚒𝚗𝚔:https://www.facebook.com/100095054572020");
             } catch (error) {

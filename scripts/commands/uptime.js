@@ -29,7 +29,7 @@ module.exports = {
       const usedMemoryGB = totalMemoryGB - freeMemoryGB;
 
       const systemInfo = `
-━━━━[ 𝙷𝙴𝚁𝚄𝙺𝙾 𝚄𝙿𝚃𝙸𝙼𝙴 ]━━━━
+┏━━━━━━━━━━━━━━┓\n➤ 𝗛𝗘𝗥𝗨𝗞𝗢 𝗨𝗣𝗧𝗜𝗠𝗘 ⏲️\n┗━━━━━━━━━━━━━━┛
 
 ➤ [ ${uptimeFormatted} ]
 

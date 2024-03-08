@@ -29,7 +29,7 @@ module.exports = {
       const usedMemoryGB = totalMemoryGB - freeMemoryGB;
 
       const systemInfo = `
-┏━━━━━━━━━━━━━━┓\n➤ 𝗛𝗘𝗥𝗨𝗞𝗢 𝗨𝗣𝗧𝗜𝗠𝗘 ⏲️\n┗━━━━━━━━━━━━━━┛
+┏━━━━━━━━━━━━━━━┓\n➤ 𝗛𝗘𝗥𝗨𝗞𝗢 𝗨𝗣𝗧𝗜𝗠𝗘 ⏲️\n┗━━━━━━━━━━━━━━━┛
 
 ➤ [ ${uptimeFormatted} ]
 
@@ -41,7 +41,7 @@ module.exports = {
  ➤ CPU Usage: ${cpuUsage.toFixed(1)}%
  ➤ RAM Usage: ${((usedMemoryGB / totalMemoryGB) * 100).toFixed(1)}%
  ➤ Uptime: ${uptimeInSeconds.toFixed(2)} seconds
-`;
+\n\n━━━━━━━━━━━━━━━━`;
 
       api.sendMessage(systemInfo, event.threadID, event.messageID);
     } catch (error) {

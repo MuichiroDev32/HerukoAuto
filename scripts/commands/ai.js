@@ -24,7 +24,7 @@ module.exports = {
                 box.reply(`👋 |  Hello, ${userName}! Ai Searching your "${question}" Please wait....↺`);
                 const response = await axios.get(`https://hiro-api.replit.app/ai/hercai?ask=${encodeURIComponent(formattedQuestion)}`);
                 const aiResponse = response.data.reply;
-                box.reply(`┏━━━━━━━━━━━━━┓\n➤ 𝗔𝗜 𝗥𝗘𝗦𝗣𝗢𝗡𝗦𝗘 💬\n┗━━━━━━━━━━━━━┛\n➤ 𝙷𝚎𝚕𝚕𝚘✍️:"${userName}"\n➤ 𝚈𝚘𝚞𝚛 𝚚𝚞𝚎𝚜𝚝𝚒𝚘𝚗 𝚒𝚜:"${question}"\n\n➤ 𝙰𝚒 𝙰𝚗𝚜𝚠𝚎𝚛:\n\n${aiResponse}` + "\n━━━━━━━━━━━━━━━━━\n➤ 𝙼𝚘𝚍𝚒𝚏𝚒𝚎𝚍 𝙱𝚢: 𝙹𝚊𝚢𝚖𝚊𝚛 𝚡 𝙷𝚎𝚛𝚞𝚔𝚘\n➤ 𝙾𝚠𝚗𝚎𝚛 𝚕𝚒𝚗𝚔:https://www.facebook.com/100095054572020");
+                box.reply(`┏━━━━━━━━━━━━━┓\n➤ 𝗔𝗜 𝗥𝗘𝗦𝗣𝗢𝗡𝗦𝗘 💬\n┗━━━━━━━━━━━━━┛\n➤ 𝙷𝚎𝚕𝚕𝚘✍️:"${userName}"\n➤ 𝚈𝚘𝚞𝚛 𝚚𝚞𝚎𝚜𝚝𝚒𝚘𝚗 𝚒𝚜:"${question}"\n\n➤ 𝙰𝚒 𝙰𝚗𝚜𝚠𝚎𝚛:\n${aiResponse}` + "\n\n━━━━━━━━━━━━━━━━━\n➤ 𝙼𝚘𝚍𝚒𝚏𝚒𝚎𝚍 𝙱𝚢: 𝙹𝚊𝚢𝚖𝚊𝚛 𝚡 𝙷𝚎𝚛𝚞𝚔𝚘\n➤ 𝙾𝚠𝚗𝚎𝚛 𝚕𝚒𝚗𝚔:https://www.facebook.com/100095054572020");
             } catch (error) {
                 console.error("Error fetching AI response:", error);
                 box.reply("Failed to get AI response. Please try again later.");

@@ -30,7 +30,7 @@ module.exports = {
                 box.reply("Failed to get AI response. Please try again later.");
             }
         } else {
-            box.reply("┏━━━━━━━━━━━━┓\n➤ 𝗔𝗦𝗞 𝗔𝗜 🤖\n┗━━━━━━━━━━━━┛\nPlease provide a question after the command. For example: `-ai what is love?`\n\n━━━━━━━━━━━━━━");
+            box.reply("┏━━━━━━━━━━━━┓\n➤ 𝗔𝗦𝗞 𝗔𝗜 🤖\n┗━━━━━━━━━━━━┛\nPlease provide a question after the command\nFor example:\n`-ai what is love?`\n\n━━━━━━━━━━━━━━");
         }
     }
 };

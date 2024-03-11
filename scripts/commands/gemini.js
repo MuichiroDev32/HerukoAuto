@@ -11,7 +11,7 @@ module.exports = {
   run: async ({ api, event, args, box }) => {
     const question = args.join(" ");
 
-    if (!question) {
+    if (inputText) {
       box.reply(
         "Please provide a question after the command using the query parameter.",
       );
@@ -20,7 +20,7 @@ module.exports = {
 
     try {
       const response = await axios.get(
-        `https://lianeapi.onrender.com/@hercai/api/gemini?key=j86bwkwo-8hako-12C&query=${question}`,
+        `https://hazee-gemini-pro-vision-12174af6c652.herokuapp.com/gemini-vision?text=${encodeURIComponent(inputText)}`,
       );
       const message = response.data.message;
 
